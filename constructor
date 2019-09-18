@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+class line()
+{
+public:
+void setlength(double len);
+line(); // this is a contructor , having same name as the name of the class, having no datatype
+}
+
+line:: line(void)
+{
+cout<<"the object is created"<<endl;
+}
