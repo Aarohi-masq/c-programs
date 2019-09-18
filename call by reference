@@ -1,0 +1,15 @@
+void add(int &a, int &b);       //here a and b are reference variables
+int main()
+{
+inta1 , b1;
+int &r=a1;
+int * p;
+p=&a1;
+ a1=10, b1=100;
+add(a1, b1);                                // fnc. call
+return 0;
+}
+void add(int &a, int &b)
+{
+int c=a+b;
+}
