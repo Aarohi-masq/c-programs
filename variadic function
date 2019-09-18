@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+#include<stdarg.h>
+
+int add(int num, ...);
+
+int main()
+
+{
+  
+printf("result-1 using 3- argument: %d\n", add(2,2,3));
+
+printf("result2 using argument 5 : %d\n", add(4,2, 3, 4, 5));
+  
+return 0;
+
+
+}
+
+
+int add(int num, ...)
+
+{
+  
+va_list valist;
+  
+int i, sum=0;
+  
+va_start (valist, num);
+  
+for (i=0; i< num; i++)
+  
+{
+    
+sum= sum+ va_arg( valist, int);
+
+}
+  
+va_end(valist);
+  
+return sum;
+ 
+
+}
