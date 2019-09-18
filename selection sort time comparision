@@ -1,0 +1,48 @@
+#include<stdio.h>  
+#include<time.h>
+int smallest(int[],int,int);  
+void main ()  
+{  
+    int i, j,k,pos,temp,n;   
+    clock_t t;
+    t=clock();
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+     
+
+    for(i=0;i<n;i++)  
+    {  
+        pos = smallest(a,10,i);  
+        temp = a[i];  
+        a[i]=a[pos];  
+        a[pos] = temp;  
+    }  
+    printf("\nprinting sorted elements...\n");  
+    for(i=0;i<n;i++)  
+    {  
+        printf("%d\n",a[i]);  
+    }  
+    t=clock()-t;
+    double time_taken=((double)t)/CLOCKS_PER_SEC;
+    printf("%f seconds are taken to sort %d elements by bubble sort",time_taken,n);
+
+}  
+int smallest(int a[], int n, int i)  
+{  
+    int small,pos,j;  
+    small = a[i];  
+    pos = i;  
+    for(j=i+1;j<n;j++)  
+    {  
+        if(a[j]<small)  
+        {  
+            small = a[j];  
+            pos=j;  
+        }  
+    }  
+    return pos;  
+}  
