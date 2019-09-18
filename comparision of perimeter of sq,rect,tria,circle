@@ -1,0 +1,51 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+class circle;
+class square;
+class triangle;
+class rectangle
+{
+    public:
+    int l=2, b;
+    float area=314;
+    int peri;
+};
+class circle
+{
+     public:
+    int r, peri;
+    float area=314;
+};
+class square
+{
+     public:
+    int s, peri;
+    float area=314;
+};
+class triangle
+{
+     public:
+    int h,b,p=4,peri;
+    float area=314;
+};
+ int main()
+ {
+      triangle t;
+      rectangle r;
+      circle c;
+      square s;
+     r.b=r.area/r.l;
+     r.peri=2*(r.l+r.b);
+     cout<<"perimeter of rectangle is:"<<r.peri<<endl;
+     c.r=sqrt(c.area/3.14);
+     c.peri=2*3.14*c.r;
+     cout<<"perimeter of circle is:"<<c.peri<<endl;
+     s.s=sqrt(s.area);
+     s.peri=4*s.s;
+     cout<<"perimeter of square is:"<<s.peri<<endl;
+     t.b=2*t.area/t.p;
+     t.h=sqrt((t.b*t.b)+(t.p*t.p));
+     t.peri=t.h+t.b+t.p;
+     cout<<"perimeter of triangle is:"<<s.peri<<endl;
+ }
