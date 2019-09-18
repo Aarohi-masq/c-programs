@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+int main()
+
+{
+
+int a;
+
+float b;
+
+int * ptr1;
+
+float * ptr2;
+char * ptr3;
+
+printf("size of integer pointer = %d\n", sizeof (ptr1));
+
+printf("size of float pointer = %d\n", sizeof(ptr2));
+
+printf("size of character pointer = %d\n", sizeof (ptr3));
+
+
+printf("adderess of the mem. loc. of integer =%p\n", &a);
+
+printf("adderess of the mem. loc. of float =%p\n", &b); 
+ptr1=&a;
+*ptr1=100;
+printf("pointer's adderess: =%p\n", &ptr1);
+
+printf("pointer's adderess: =%p\n", ptr1);
+printf("adderess of the mem. loc. of integer =%p\n", &a);
+int **ptr4; 
+
+ptr4 = &ptr1;
+
+**ptr4 = 1000;
+printf(" adderess of the mem. loc. of integer = %p\n" , &a);
+
+return 0;
+
+}
