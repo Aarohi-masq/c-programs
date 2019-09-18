@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+  int no;                                         //data
+  struct node *next;                      // self referential
+} *new, *first, *ptr;
+int main()
+{
+  new=(struct node*)malloc(sizeof(struct node));
+  printf ("adderess of the new block: %p\n", new);
+  
+  printf("enter an element:");
+  scanf("%d", &new->no);
+  new->next = NULL;
+
+  printf("(node-1) adderess : %p, no: %d, next:%p\n", new, new->no, new->next);
+  //----------------------------------------------------------------------------------
+  first =new;                           // remembering the first block for future reference
+  //----------------------------------------------------------------------------------
+  
+  new=(struct node*)malloc(sizeof(struct node));
+  printf ("adderess of the new block: %p\n", new);
+  
+  printf("enter an element:");
+  scanf("%d", &new->no);
+  new->next = NULL;
+
+  printf("(node-2) adderess : %p, no: %d, next:%p\n", new, new->no, new->next);
+  //----------------------------------------------------------------------------------
+  first->next =new;                           // linking node1 to node 2
+  //----------------------------------------------------------------------------------
+
+  new=(struct node*)malloc(sizeof(struct node));
+  printf ("adderess of the new block: %p\n", new);
+  
+  printf("enter an element:");
+  scanf("%d", &new->no);
+  new->next = NULL;
+
+  printf("(node-3) adderess : %p, no: %d, next:%p\n", new, new->no, new->next);
+  //----------------------------------------------------------------------------------
+  first->next->next =new;                           // linking node 2 to node 3
+  //----------------------------------------------------------------------------------
+
+  printf ("\n(node-1) data=%d, adderess =%p\n", first->no, first->next);
+  printf ("\n(node-2) data=%d, adderess =%p\n", first->next->no, first->next->next);
+  printf ("(node-3) data=%d, adderess =%p\n", new->no, new->next);
+
+  return 0;
+}
+
+____________________________________________
