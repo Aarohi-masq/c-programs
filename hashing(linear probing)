@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+ int ar[7],show[10],i,ch=0,j=0,flag;
+  cout<<"Enter 7 elements for array= ";
+  for(i=0;i<7;i++)
+    cin>>ar[i];
+   for(i=0;i<10;i++)
+     show[i]=0;
+   for(i=0;i<7;i++)
+    { 
+       ch=ar[i]%10; 
+       j=ch;
+      if(show[ch]==0)
+        show[ch]=ar[i];
+      else
+        do{  
+             if(show[j+=1]==0)
+               {show[j]=ar[i];
+                 flag=1;}
+        }while(flag!=1);
+    }
+    for(i=0;i<10;i++)
+     cout<<show[i]<<" ";
+    return 0;
+}
