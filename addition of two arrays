@@ -1,0 +1,87 @@
+#include<stdio.h>
+
+int* add(int*, int*);
+
+void display(int*);
+
+int i, result[5];
+
+
+int main()
+
+{
+  
+int a[5], b[5];
+  
+printf("enter 5 elements of array-1:");
+  
+for(i=0; i<5; i++)
+  
+{
+ 
+    scanf("%d", &a[i]);
+  
+}
+  
+printf("enter the 5 elements of array-2:");
+  
+for(i=0; i<5; i++)
+  
+{
+ 
+    scanf("%d", &b[i]);
+  
+}
+  
+int *sum= add(a,b);
+  
+printf("\nelements of resultant array: ");
+  
+display(sum);
+  
+return 0;
+
+}
+
+int* add(int* x, int* y)
+
+{
+
+  printf("\nelements of array-1:");
+  
+display(x);
+  
+printf("\nelements of array-2:");
+  
+display(y);
+  
+for(i=0; i<5; i++)
+  
+{
+    
+result[i]=x[i]+y[i];
+    
+  
+}
+  
+return result;
+
+}
+
+void display(int* x)
+
+{
+  
+for(i=0; i<5; i++)
+  
+{
+    
+printf("%d", x[i]);
+    
+printf(",");
+  
+}
+  
+printf("\n");
+
+}
