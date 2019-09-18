@@ -1,0 +1,64 @@
+#include<stdio.h>
+int choice=0,size=0;
+
+void pop();
+void push();
+void display();
+int main()
+{
+  printf("enter the size of the stack:");
+  scanf("%d\n", &size);
+  printf("choices:\n1.pop\n2.push()\n3.display\n");
+  printf("enter choice");
+  scanf("%d\n", &choice);
+  switch(choice)
+  {
+    case 1: pop();
+    break;
+    case 2: push();
+    break;
+    case 3: display();
+    break;
+    default: printf("error\n please enter choice 1/2/3");
+  }
+  return 0;
+}
+
+void pop()
+{
+  int top=-1, stack[size];
+  if (top=-1)
+  printf("underflowed\n");
+  else
+  {
+    top=top-1;
+  }
+}
+void push()
+{
+  int top=-1, stack[size];
+  if (top=size)
+  printf("overflowed\n");
+  else 
+  {
+    top=top+1;
+    printf("enter the value to be pushed in stack:\n");
+    scanf("%d\n", &stack[top]);
+  }
+}
+void display()
+{
+  int top=-1, stack[size];
+  if (top=-1)
+  printf("underflowed\n");
+  else if (top=size)
+  printf("overflowed\n");
+  else
+  {
+    for(int i=0; i<size; i++)
+    {
+      printf("element of stack:\n");
+      printf("%d", &stack[i]);
+    }
+  }
+}
