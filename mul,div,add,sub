@@ -1,0 +1,17 @@
+#include
+int main()
+{
+int a, b, s, d, m;
+float di;
+printf("enter two numbers :");
+scanf("%d%d", &a, &b);
+s=a+b;
+d=a-b;
+m=a*b;
+di=a/b;
+printf("sum=%d\n",s);
+printf("difference=%d\n",d);
+printf("multiply=%d\n",m);
+printf("division=%d\n",di);
+return 0;
+}
