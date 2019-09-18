@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define pi 3.14
+int main ()
+{
+int r;
+float area;
+printf("r=");
+scanf("%d", &r);
+area=3.14*r*r;
+printf("result=%f/n", area);
+return 0;
+}
