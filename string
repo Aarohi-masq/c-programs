@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+char a[20] ,b[20];
+int c;
+printf("enter name\n");
+scanf("%s", a);
+printf("enter door/street no\n");
+scanf("%s", b);
+printf("enter pin codeprintf\n");
+scanf("%d", &c);
+printf("name:\n%s",a);
+printf("door no/street:\n%s", b);
+printf("pincode:\n%d",c);
+}
