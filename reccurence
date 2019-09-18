@@ -1,0 +1,21 @@
+#include<stdio.h>
+void product(int, int);
+int main()
+{
+int a, b;
+printf("enter 2 numbers:");
+scanf("%d%d", &a, &b);
+product(a, b);
+return 0;
+}
+void product(int a, int b)
+{
+static int sum=0;
+if (b!=0)
+{
+sum= sum+a;
+product(a, b-1);
+}
+if (b==0)
+printf("product : %d\n", sum);
+}
