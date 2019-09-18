@@ -1,0 +1,21 @@
+#include<stdio.h>
+struct sample
+{
+int i1, i2;
+char c1, c2;
+float f1;
+};
+
+int main()
+{
+struct sample s1 = {10, 20, 'a', b', 3.14};
+printf("size of structure: %d\n\n", sizeof(s1));
+
+printf("adderess of int-1: %p\n",  &s1.i1);
+printf("adderess of int-2: %p\n", &s1.i2);
+printf("adderess of char-1: %p\n", &s1.c1);
+printf("adderess of char-2:%p\n',&s1.c2);
+
+printf("adderess of float -1: %p\n", &s1.f1);
+return 0;
+}
