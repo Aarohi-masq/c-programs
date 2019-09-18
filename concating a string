@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+void display (char b[ ]);
+int main()
+{
+char a[ ]= " c programming";
+display (a);
+printf("string entered: %s\n", a);
+return 0;
+}
+void display (char b[ ])
+{
+printf ("string passed: %s\n", b);
+printf("enter a new string of size-%d: ", strlen(b)-1);
+fgets(b, strlen(b), stdin);
+}
