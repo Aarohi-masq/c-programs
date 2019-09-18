@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+class distance
+{
+  public:
+  int inch;
+  float feet;
+};
+int main()
+{
+  class distance d;
+  cout<<"enter the distance in inches:"<<endl;
+  cin>>d.inch;
+  d.feet=d.inch/12;
+  cout<<"the distance in feet:"<<d.feet<<endl;
+  d.inch=d.inch+12;
+  d.feet=d.inch/12;
+  cout<<"the distance+12 in feet:"<<d.feet<<endl;
+}
