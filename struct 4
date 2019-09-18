@@ -1,0 +1,15 @@
+#include<stdio.h>
+typedef struct student {
+int no ;
+char name[20];
+}stud;
+int main()
+{
+stud stud1;
+stud *ptr;
+ptr = &stud1;
+printf("enter no. &name of stud1:");
+scanf("%d%[^\n]s", &stud1.no, stud1.name);
+printf("stud1 details: %d, %s\n", ptr->no, ptr ->name);
+return 0;
+}
