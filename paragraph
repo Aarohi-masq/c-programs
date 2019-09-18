@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+char sentence[5];
+printf("enter sentence");
+scanf("%5[^\n]s", sentence);
+printf("accepted sentence : %s\n", sentence);
+
+ char paragragh[100];
+printf("enter paragraph:");
+scanf("%[^\t]s", paragragh);
+printf (" accepted paragragh: %s\n", paragragh);
+return 0;
+}
