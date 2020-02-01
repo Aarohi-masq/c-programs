@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main(void) {
+	int p,g, flag=0;
+	scanf("%d", &p);
+	for(int i=2; i<p; i++)
+	{
+	    if(p%i==0)
+	    flag++;
+	}
+	if(flag==0)
+	{
+	    scanf("%d", &g);
+	    if(g>0 && g<p)
+	    {
+	        int long long a, b; 
+	        //int x, y, X, Y;
+	        scanf("%lld", &a);
+	        scanf("%lld", &b);
+	        long long int x=(long long int) pow(g,a)%p;
+	        long long int y=(long long int) pow(g,b)%p;
+	        long long int X=(long long int) pow(y,a)%p;
+	        long long int Y=(long long int) pow(x,b)%p;
+	        if(X==Y)
+	        printf("Keys successfully exchanged!");
+	    }
+	}
+	return 0;
+}
+
